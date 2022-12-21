@@ -92,8 +92,8 @@ console.log("Financial Analysis");
 console.log("----------------------------");
 console.log("Total Months: " + finances.length);
 
+//logging the net total amount of Profit/Losses over the entire period
 let sumofFinances = 0;
-
 finances.forEach((month) => {
     sumofFinances += month[1];
 });
