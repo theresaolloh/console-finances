@@ -99,3 +99,10 @@ finances.forEach((month) => {
 });
 
 console.log("Total profit/loss: ", sumofFinances);
+
+//logging average of the changes in Profit/Losses over the entire period
+for (i = 0; i <= finances.length - 1; i++) {
+    const change = finances[i + 1][1] - finances[1][1];
+    changesSoFar += change;
+}
+const netChange = changesSoFar / (finances.length - 1);
