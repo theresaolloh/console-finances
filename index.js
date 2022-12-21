@@ -90,4 +90,12 @@ var finances = [
 //logging in the dataset given
 console.log("Financial Analysis");
 console.log("----------------------------");
-console.log("Total Months: " + finances.length)
+console.log("Total Months: " + finances.length);
+
+let sumofFinances = 0;
+
+finances.forEach((month) => {
+    sumofFinances += month[1];
+});
+
+console.log("Total profit/loss: ", sumofFinances);
