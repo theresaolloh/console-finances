@@ -102,9 +102,12 @@ console.log("Total profit/loss: ", sumofFinances);
 
 //logging average of the changes in Profit/Losses over the entire period
 let changesSoFar = 0;
+let maxChange = Number.MIN_VALUE; //declared maximum change to the smallest number possible
 for (let i = 0; i <= finances.length - 2; i++) {
     const change = finances[i + 1][1] - finances[1][1];
+    maxChange = Math.max(maxChange, change);
     changesSoFar += change;
 }
 const averageChange = changesSoFar / (finances.length - 1);
-console.log("Net changes: ", averageChange);
+console.log("Average  Change: ", averageChange);
+console.log("Greatest Increase in Profits: ", maxChange);
