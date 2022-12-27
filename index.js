@@ -92,22 +92,67 @@ console.log("Financial Analysis");
 console.log("----------------------------");
 console.log("Total Months: " + finances.length);
 
-//logging the net total amount of Profit/Losses over the entire period
+//this section computes and logs the net total amount of Profit/Losses over the entire period
 let sumofFinances = 0;
 finances.forEach((month) => {
     sumofFinances += month[1];
 });
+console.log("Total: ", sumofFinances);
 
-console.log("Total profit/loss: ", sumofFinances);
-
-//logging average of the changes in Profit/Losses over the entire period
+//this section computes and logs the average of the changes in Profit/Losses over the entire period
 let changesSoFar = 0;
-let maxChange = Number.MIN_VALUE; //declared maximum change to the smallest number possible
-for (let i = 0; i <= finances.length - 2; i++) {
-    const change = finances[i + 1][1] - finances[1][1];
-    maxChange = Math.max(maxChange, change);
+let maxChange = Number.MIN_VALUE; //assigns the value of maximum change to the smallest positive numeric value possible
+let minChange = Number.MAX_VALUE; //assigns the value of minimum change to the largest positive numeric value possible
+let monthOfMaxChange = "";
+let monthofMinChange = "";
+
+for (let i = 1; i <= finances.length - 1; i++) {
+    const change = finances[i][1] - finances[i - 1][1];
+
+    if (maxChange < change) {
+        monthOfMaxChange = finances[i][0];
+        maxChange = change;
+    }
+    if (minChange > change) {
+        minChange = change;
+        monthOfMinChange = finances[i][0];
+    }
     changesSoFar += change;
 }
 const averageChange = changesSoFar / (finances.length - 1);
 console.log("Average  Change: ", averageChange);
-console.log("Greatest Increase in Profits: ", maxChange);
+console.log("Greatest Increase in Profits: " + monthOfMaxChange + " (" + maxChange + ")");
+console.log("Greatest Decrease in Profits: " + monthOfMinChange + " (" + minChange + ")");
+/*
+let netProfit = 0;
+
+for (const finance of finances) {
+    const value = finance[1];
+    netProfit += value;
+}
+
+console.log(netProfit);
+
+let totalChange = 0;
+
+for (let i = 1; i < finances.length; i++) {
+    const currentValue = finances[i][1];
+    const previousValue = finances[i - 1][1];
+    totalChange += currentValue - previousValue;
+}
+
+const averageChangev2 = totalChange / (finances.length - 1);
+console.log(averageChangev2);
+*/
+/*
+const financeChanges = [];
+for (let i = 1; i < finances.length; i++) {
+    const change = finances[i][1] - finances[i - 1][1];
+    financeChanges.push(change);
+}
+financeChanges.sort((a, b) => b - a);
+const maxChange = financeChanges[0];
+const maxChangeIndex = financeChanges.indexOf(maxChange);
+const maxChangeMonth = finances[maxChangeIndex][0];
+console.log(maxChange);
+*/
