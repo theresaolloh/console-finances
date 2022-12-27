@@ -97,7 +97,7 @@ let sumofFinances = 0;
 finances.forEach((month) => {
     sumofFinances += month[1];
 });
-console.log("Total: ", sumofFinances);
+console.log("Total: ", "$" + sumofFinances);
 
 //this section computes and logs the average of the changes in Profit/Losses over the entire period
 let changesSoFar = 0;
@@ -121,7 +121,7 @@ for (let i = 1; i <= finances.length - 1; i++) {
     changesSoFar += change;
 }
 const averageChange = changesSoFar / (finances.length - 1);
-console.log("Average  Change: ", averageChange);
-console.log("Greatest Increase in Profits: " + monthOfMaxChange + " (" + maxChange + ")");
-console.log("Greatest Decrease in Profits: " + monthOfMinChange + " (" + minChange + ")");
+console.log("Average  Change: ", "$" + averageChange);
+console.log("Greatest Increase in Profits: " + monthOfMaxChange + " (" + "$" + maxChange + ")");
+console.log("Greatest Decrease in Profits: " + monthOfMinChange + " (" + "$" + minChange + ")");
 

@@ -1,34 +1,22 @@
-# Unit 4 Challenge: Console Finances
+# Module Four Challenge
 
-## Overview
- 
+## Project Overview
+
 In this challenge, you'll be using the concepts you've learned to complete the required activity. This activity presents a real-world situation in which your newfound JavaScript skills will come in handy. You are tasked with creating code for analyzing the financial records of a company. You have been provided with a financial dataset in the `starter/index.js` file.
 
-## Instructions
+## Brief / Acceptance Criteria
 
-1. Create a new GitHub repo called `Console-Finances`. Then, clone it to your computer.
-
-2. Copy the starter files in your local git repository.
-   
-You have been given a dataset composed of arrays with two fields, Date and Profit/Losses.
-
-Your task is to write JavaScript code that analyzes the records to calculate each of the following:
-
+We have been given a dataset composed of arrays with two fields, Date and Profit/Losses. Our task was to write JavaScript code that analyzed the records to calculate each of the following:
 * The total number of months included in the dataset.
-
 * The net total amount of Profit/Losses over the entire period.
-
 * The average of the **changes** in Profit/Losses over the entire period.
   * You will need to track what the total change in profits are from month to month and then find the average.
   * (`Total/Number of months`)
-
 * The greatest increase in profits (date and amount) over the entire period.
-
 * The greatest decrease in losses (date and amount) over the entire period.
 
-When you open your code in the browser your resulting analysis should look similar to the following:
+When the code is opened in the browser, the resulting analysis should look similar to the following:
 
-  ```text
   Financial Analysis
   ----------------------------
   Total Months: 25
@@ -38,57 +26,22 @@ When you open your code in the browser your resulting analysis should look simil
   Greatest Decrease in Profits: Sep-2013 ($-2196167)
   ```
 
-Your final code should print the analysis to the console.
+The final code should print the analysis to the console.
 
-**Hints:**
+## Technologies Used
 
-* You will need to do some research on your own for this project!
+* HTML
+* CSS
+* JavaScript
+* VS Code 
+* Git and GitHub
 
-* Remember, in order to combine strings and variables in the console you will need to use **concatenation**.
+## Wins / Key Learnings
+A key learning for me was understanding how to work with nested arrays and how to use for loops to iterate over the array, in this instance, for financial anaylsis.
 
-* How do you only print to the nearest 100th in JavaScript?
+## License
 
-## Grading Requirements
-
-This homework is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository contains application code.
-
-### Repository Quality: 12%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for variable naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme with description, screenshot, link to deployed application.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository that contains your code. Give the repository a unique name and include a README file that describes the project.
+MIT License. Please refer to the LICENSE in the repo.
 
 ---
-
-## Copyright
-
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
 
