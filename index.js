@@ -106,6 +106,7 @@ let minChange = Number.MAX_VALUE; //assigns the value of minimum change to the l
 let monthOfMaxChange = "";
 let monthofMinChange = "";
 
+//for loop to calcultae the changes
 for (let i = 1; i <= finances.length - 1; i++) {
     const change = finances[i][1] - finances[i - 1][1];
 
@@ -123,36 +124,4 @@ const averageChange = changesSoFar / (finances.length - 1);
 console.log("Average  Change: ", averageChange);
 console.log("Greatest Increase in Profits: " + monthOfMaxChange + " (" + maxChange + ")");
 console.log("Greatest Decrease in Profits: " + monthOfMinChange + " (" + minChange + ")");
-/*
-let netProfit = 0;
 
-for (const finance of finances) {
-    const value = finance[1];
-    netProfit += value;
-}
-
-console.log(netProfit);
-
-let totalChange = 0;
-
-for (let i = 1; i < finances.length; i++) {
-    const currentValue = finances[i][1];
-    const previousValue = finances[i - 1][1];
-    totalChange += currentValue - previousValue;
-}
-
-const averageChangev2 = totalChange / (finances.length - 1);
-console.log(averageChangev2);
-*/
-/*
-const financeChanges = [];
-for (let i = 1; i < finances.length; i++) {
-    const change = finances[i][1] - finances[i - 1][1];
-    financeChanges.push(change);
-}
-financeChanges.sort((a, b) => b - a);
-const maxChange = financeChanges[0];
-const maxChangeIndex = financeChanges.indexOf(maxChange);
-const maxChangeMonth = finances[maxChangeIndex][0];
-console.log(maxChange);
-*/
